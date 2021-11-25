@@ -1,0 +1,58 @@
+<div [@popupOut] *ngIf="!exitAnimation" class="popup popup--modifier-combo">
+  <div [@popupIn] class="content">
+    <div class="main-grid">
+      <!-- header with images  -->
+      <div class="col-1-17 row-1-10">
+        <header class="header full">
+          <div class="combo-name">
+            <div class="combo-img-wrapper">
+              <img class="combo-img" [src]="button | catalogPicture" />
+            </div>
+            <h3 class="width100 text-clamp--2">{{ button | translateCatalogTitle }}</h3>
+          </div>
+        </header>
+      </div>
+      <!-- back button section  -->
+      <div class="col-1-17 full back-menu position-relative" [ngClass]="!isAdaEnabled() ? 'row-10-12' : 'row-10-13'">
+        <button *ngIf="activeIndex !== 0" class="ui-button primary bg--tertiary tiny iconLeft" (click)='backClick()'
+          [attr.aria-label]="'Combo Back Button'">
+          <span class="ui-button__wrapper">
+            <svg class="lib-icon size--20">
+              <use href="#lib-icon--chevron-left"></use>
+            </svg>
+            <span>{{ '9' | dotTranslate }}</span>
+          </span>
+        </button>
+      </div>
+      <!-- modifier list with scroll  -->
+      <div class="flex flex--column scrollY hideScrollbar col-1-17"
+        [ngClass]="!isAdaEnabled() ? 'col-1-17 row-12-28' : 'col-1-17 row-13-26'">
+        <acr-button-modifier-list  *ngIf='mofifierStepButtons' class="modifiers-list withoutHeader" [modifier]='mofifierStepButtons'
+          [catalogModifierLabelText]="catalogModifierLabelText" [isButtonChanged]="isButtonChanged"
+          [onOrder]="!button.isChanged">
+        </acr-button-modifier-list>
+      </div>
+      <!-- bottom actions  -->
+      <div class="col-1-17" [ngClass]="!isAdaEnabled() ? 'row-28-31' : 'row-26-31'">
+        <div class="actions full">
+          <button class="ui-button primary small" (click)='cancelClick()' [attr.aria-label]="'Cancel Button'">
+            <span class="ui-button__wrapper">
+              <span>{{ '23' | dotTranslate}}</span>
+            </span>
+          </button>
+          <acr-steps class="stepper" [steps]="modifiers" [activeIndex]="activeIndex"></acr-steps>
+          <button [disabled]="disableConfirmButton" class="ui-button secondary iconRight small" (click)='confirmClick()'
+            [attr.aria-label]="'Confirm Button'">
+            <span class="ui-button__wrapper">
+              <svg class="lib-icon size--20">
+                <use href="#lib-icon--chevron-right"></use>
+              </svg>
+              <span *ngIf="!isLastStep">{{ '28' | dotTranslate}}</span>
+              <span *ngIf="isLastStep" [ngClass]="{'fs--16' : isLastStep}">{{ '27' | dotTranslate}}</span>
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

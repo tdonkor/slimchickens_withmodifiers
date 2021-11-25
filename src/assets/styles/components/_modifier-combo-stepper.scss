@@ -1,0 +1,40 @@
+.popup--modifier-combo {
+  .content {
+    height: 90%;
+  }
+
+  .header {
+    border-top-left-radius: 18rem;
+    border-top-right-radius: 18rem;
+    position: relative;
+
+    .combo-name {
+      position: absolute;
+      bottom: 20rem;
+      left: 0;
+      right: 0;
+      margin: 0;
+      text-align: center;
+    }
+
+    .combo-img-wrapper {
+      position: absolute;
+      bottom: 100%;
+      width: 100%;
+    }
+    .combo-img {
+      position: absolute;
+      max-width: 360rem;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 1;
+    }
+  }
+
+  .back-menu {
+    display: flex;
+    padding: 0 40rem;
+    align-items: center;
+  }
+}

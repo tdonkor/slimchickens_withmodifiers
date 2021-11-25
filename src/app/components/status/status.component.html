@@ -1,0 +1,11 @@
+<div class="status">
+  <div class="openAdmin" (click)="handleAdminClick($event)"></div>
+
+  <div class="status-messages eventsNone" [ngClass]="{'hasBackground' : messages.length > 0}" [attr.aria-label]="'Status Messages'">
+    <ng-container *ngIf="messages.length > 0">
+      <p *ngFor="let message of messages">{{ message }}</p>
+    </ng-container>
+    <!-- Glory Cash Errors Color Codes -->
+    <div class="color-code eventsNone {{kioskColor}}" aria-label="Color Code"></div>
+  </div>
+</div>

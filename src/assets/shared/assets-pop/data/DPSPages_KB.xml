@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DPSPages>
+  <Promo Type="Menu" DisplayMode="3" ID="2" Active="1" PosDiscountID="72" Order="1">
+    <Description>
+      <LblName Def="Promo crunch" En="Promo crunch" />
+      <LblNoItem Def="Promo unavailable" En="Promo unavailable" />
+      <Avlb Service="0" DOW="127">
+        <Days Start="201030" Stop="201230" />
+        <THS Start="0000" Stop="0000" />
+      </Avlb>
+    </Description>
+    <Content>
+      <Menu ID="7136" Name="CrunchWrap Supreme" Order="1" />
+    </Content>
+  </Promo>
+</DPSPages>

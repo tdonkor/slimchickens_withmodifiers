@@ -1,0 +1,5 @@
+<header class="modifiers-list__header">
+  <h4 *ngIf="catalogModifierLabelText" class="fs--40 mb--20">{{ catalogModifierLabelText }}</h4>
+  <h5 *ngIf="modifier.PageInfo as groupTitle" class="title">{{ groupTitle.TitleDictionary ? (groupTitle.TitleDictionary | dotTitleTranslate) : groupTitle.Title }}</h5>
+  <h5 class="title" *ngIf='displayText'>{{'73' | dotTranslate}}</h5>
+</header>

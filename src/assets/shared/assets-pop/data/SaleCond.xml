@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SaleCond>
+  <Items>
+    <IfItem ID="407">
+      <Sale SaleGrpID="1313" JoinToCombo="0" LinkToParent="1" />
+    </IfItem>
+    <IfItem ID="408">
+      <Sale SaleGrpID="1313" JoinToCombo="0" LinkToParent="1" />
+    </IfItem>
+    <IfItem ID="409">
+      <Sale SaleGrpID="1313" JoinToCombo="0" LinkToParent="1" />
+    </IfItem>
+    <IfItem ID="501500">
+      <Sale SaleGrpID="1313" JoinToCombo="0" LinkToParent="1" />
+    </IfItem>
+    <IfItem ID="318">
+      <Sale SaleGrpID="1313" JoinToCombo="0" LinkToParent="1" />
+    </IfItem>
+    <IfItem ID="501400">
+      <Sale SaleGrpID="1313" JoinToCombo="0" LinkToParent="1" />
+    </IfItem>
+    <IfItem ID="500500">
+      <Sale SaleGrpID="1313" JoinToCombo="0" LinkToParent="1" />
+    </IfItem>
+    <IfItem ID="342">
+      <Sale SaleGrpID="1313" JoinToCombo="0" LinkToParent="1" />
+    </IfItem>
+    <IfItem ID="500200">
+      <Sale SaleGrpID="1313" JoinToCombo="0" LinkToParent="1" />
+    </IfItem>
+    <IfItem ID="500100">
+      <Sale SaleGrpID="1313" JoinToCombo="0" LinkToParent="1" />
+    </IfItem>
+    <IfItem ID="500700">
+      <Sale SaleGrpID="1313" JoinToCombo="0" LinkToParent="1" />
+    </IfItem>
+    <IfItem ID="500600">
+      <Sale SaleGrpID="1313" JoinToCombo="0" LinkToParent="1" />
+    </IfItem>
+    <IfItem ID="527">
+      <Sale SaleGrpID="1313" JoinToCombo="0" LinkToParent="1" />
+    </IfItem>
+    <IfItem ID="501300">
+      <Sale SaleGrpID="1313" JoinToCombo="0" LinkToParent="1" />
+    </IfItem>
+    <IfItem ID="312">
+      <Sale SaleGrpID="1313" JoinToCombo="0" LinkToParent="1" />
+    </IfItem>
+    <IfItem ID="266">
+      <Sale SaleGrpID="1313" JoinToCombo="0" LinkToParent="1" />
+    </IfItem>
+    <IfItem ID="528">
+      <Sale SaleGrpID="1313" JoinToCombo="0" LinkToParent="1" />
+    </IfItem>
+    <IfItem ID="529">
+      <Sale SaleGrpID="1313" JoinToCombo="0" LinkToParent="1" />
+    </IfItem>
+    <IfItem ID="526">
+      <Sale SaleGrpID="1313" JoinToCombo="0" LinkToParent="1" />
+    </IfItem>
+    <IfItem ID="222">
+      <Sale SaleGrpID="1313" JoinToCombo="0" LinkToParent="1" />
+    </IfItem>
+    <IfItem ID="708">
+      <Sale SaleGrpID="1313" JoinToCombo="0" LinkToParent="1" />
+    </IfItem>
+    <IfItem ID="709">
+      <Sale SaleGrpID="1313" JoinToCombo="0" LinkToParent="1" />
+    </IfItem>
+  </Items>
+  <Menus>
+    <IfMenu ID="7010">
+      <Sale SaleGrpID="1313" JoinToCombo="0" LinkToParent="1" />
+    </IfMenu>
+    <IfMenu ID="7020">
+      <Sale SaleGrpID="1313" JoinToCombo="0" LinkToParent="1" />
+    </IfMenu>
+    <IfMenu ID="7030">
+      <Sale SaleGrpID="1313" JoinToCombo="0" LinkToParent="1" />
+    </IfMenu>
+    <IfMenu ID="7040">
+      <Sale SaleGrpID="1313" JoinToCombo="0" LinkToParent="1" />
+    </IfMenu>
+    <IfMenu ID="7050">
+      <Sale SaleGrpID="1313" JoinToCombo="0" LinkToParent="1" />
+    </IfMenu>
+    <IfMenu ID="7060">
+      <Sale SaleGrpID="1313" JoinToCombo="0" LinkToParent="1" />
+    </IfMenu>
+  </Menus>
+  <Orders />
+</SaleCond>

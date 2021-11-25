@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tags2Products>
+  <tagAttrs>
+    <tagAttr id="1" type="label">
+      <label Def="Small label to be displayed next to item button" EN="Small label to be displayed next to item button" FR="Small label to be displayed next to item button" />
+    </tagAttr>
+    <tagAttr id="2" type="label">
+      <label Def="Large label to be displayed on info window" EN="Large label to be displayed on info window" FR="Large label to be displayed on info window" />
+    </tagAttr>
+    <tagAttr id="1" type="image">
+      <label Def="Small image to be displayed next to item button" EN="Small image to be displayed next to item button" FR="Small image to be displayed next to item button" />
+    </tagAttr>
+    <tagAttr id="2" type="image">
+      <label Def="Medium image to be displayed next to item button" EN="Medium image to be displayed next to item button" FR="Medium image to be displayed next to item button" />
+    </tagAttr>
+    <tagAttr id="3" type="image">
+      <label Def="Large image to be displayed next to item button" EN="Large image to be displayed next to item button" FR="Large image to be displayed next to item button" />
+    </tagAttr>
+  </tagAttrs>
+</tags2Products>

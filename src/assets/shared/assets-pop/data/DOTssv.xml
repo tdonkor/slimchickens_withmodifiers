@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScreenSaver FileName="DOTXV_AIR.exe">
+  <Banner ID="27" Name="Triple Double Crunchwrap Meal £8" Image="banner_15e215b8-1f41-4efe-81e6-c7c6537aa1d4.png" Active="true" Interval="5000" Order="17" skin="FullHD" BannerSubType="" BannerType="Slide" />
+  <Banner ID="29" Name="Triple Double Crunchwrap £7" Image="banner_54d03145-9d89-4539-a65a-ddf7d48c85b1.png" Active="true" Interval="5000" Order="11" skin="FullHD" BannerSubType="" BannerType="Banner" />
+  <Banner ID="30" Name="Triple Double Crunchwrap Box £8" Image="banner_cb472805-153c-4773-aeb7-1792ae604d5c.png" Active="true" Interval="15000" Order="12" skin="FullHD" BannerSubType="" BannerType="Banner" />
+  <Banner ID="31" Name="New Banner" Image="banner_00026f6e-ddf9-4c9a-9c5e-1361643073b7.png" Active="true" Interval="5000" Order="13" skin="FullHD" BannerSubType="" BannerType="Banner" />
+</ScreenSaver>
