@@ -610,8 +610,8 @@
         "ID": "16092702",
         "CA": "Si us plau, seguiu les instruccions de la pantalla del terminal",
         "ES": "Por favor, siga las instrucciones de la pantalla del terminal",
-        "EN": "Please follow the instructions on the terminal display",
-        "Def": "Please follow the instructions on the terminal display"
+        "EN": "Please follow the instructions on the payment display below’",
+        "Def": "Please follow the instructions on the payment display below’"
     },
     {
         "ID": "16092703"

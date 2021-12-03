@@ -45,7 +45,8 @@
     justify-content: space-evenly;
     align-items: center;
     padding: 10rem 20rem;
-    background: var(--early-dawn);  // Added by TD
+   background: var(--secondary);  // Added by TD
+
 
     &__title {
       font-size: 28rem;
@@ -60,22 +61,15 @@
 
     &.selected {
       position: relative;
-      background: var(--primary);   // Added by TD
-
+      background: var(--primary);
 
       .nav-slider-item {
         &__title {
-          color: var(--secondary);   // Added by TD
+        color: var(--secondary);   // Added by TD
         }
       }
     }
   }
-
-  // Added by TD
-  //.nav-slider-item:focus {
-  //  background: var(--red);
-  //}
-
 
   &.firstItemFixed {
     .nav-slider__wrapper {
@@ -98,6 +92,7 @@
         z-index: 1;
         width: $sliderItemWidth;
         box-shadow: 6rem 1rem 13rem -5rem #33333345;
+        background: var(--gray);  // Added by TD
 
         &.selected {
           position: absolute !important;

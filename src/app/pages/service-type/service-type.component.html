@@ -5,7 +5,7 @@
   <!-- Header with logo and title -->
   <div class="welcome" [ngClass]="!isAdaEnabled() ? 'col-1-17 row-4-13' : 'col-1-17 row-3-13'">
     <img class="logo" src="./assets/branding/logo.svg" alt="">
-    <div class="spacer--30"></div>
+    <div class="spacer--10"></div>
     <h1 class="title">{{ '10' | dotTranslate }}</h1>
     <h2 class="subtitle">{{ '14' | dotTranslate }}</h2>
   </div>
@@ -17,11 +17,12 @@
             [disabled]="blockKiosk || !whEatInEnabled"
             (click)="setServiceType(PosServingLocation.IN)"
             [attr.aria-label]="'Service Type: ' + PosServingLocation.IN">
-      <img src="./assets/images/img--take-in.png" alt="">
-      <div class="service-type__text">
-        <h3>{{ '11' | dotTranslate }}</h3>
-        <svg class="lib-icon size--54"><use href="#lib-icon--pill-chevron-right"></use></svg>
-      </div>
+<!--      <img src="./assets/images/img&#45;&#45;take-in.png" alt="">-->
+      <img src="./assets/images/J8320 Slims Kiosk_Eat In_Illustrations.jpg" alt="">
+<!--      <div class="service-type__text"> Added by TD removed as text in the image-->
+<!--        <h3>{{ '11' | dotTranslate }}</h3>-->
+<!--        <svg class="lib-icon size&#45;&#45;54"><use href="#lib-icon&#45;&#45;pill-chevron-right"></use></svg>-->
+<!--      </div>-->
     </button>
     <button *ngIf="appSettings.serviceType !== PosServingLocation.IN"
             class="service-type"
@@ -29,35 +30,38 @@
             [disabled]="blockKiosk || !whTakeAwayEnabled"
             (click)="setServiceType(PosServingLocation.OUT)"
             [attr.aria-label]="'Service Type: ' + PosServingLocation.OUT">
-      <img src="./assets/images/img--take-out.png" alt="">
-      <div class="service-type__text">
-        <h3>{{ '12' | dotTranslate}}</h3>
-        <svg class="lib-icon size--54"><use href="#lib-icon--pill-chevron-right"></use></svg>
-      </div>
+<!--      <img src="./assets/images/img&#45;&#45;take-out.png" alt="">-->
+      <img src="./assets/images/J8320 Slims Kiosk_Eat out_Illustrations.jpg" alt="">
+<!--      <div class="service-type__text"> Added by TD removed as text in the image-->
+<!--        <h3>{{ '12' | dotTranslate}}</h3>-->
+<!--        <svg class="lib-icon size&#45;&#45;54"><use href="#lib-icon&#45;&#45;pill-chevron-right"></use></svg>-->
+<!--      </div>-->
     </button>
   </div>
   <!-- Language selection area -->
-  <div *ngIf="appSettings.languages.length > 1" class="languages" [ngClass]="!isAdaEnabled() ? 'col-1-17 row-24-27' : 'col-1-17 row-21-27'">
-    <h4 class="fs--34">{{ '13' | dotTranslate }}</h4>
-    <div class="spacer--30"></div>
-    <div class="languages__wrapper">
-      <button class="language"
-              *ngFor="let language of appSettings.languages"
-              (click)="onLanguageButtonClick(language.code)"
-              [ngClass]="{ active: isLanguageButtonActive(language.code) }"
-              [attr.aria-label]="'Language: ' + language.name">
-        <img class="language--icon" [src]="'./assets/images/languages/' + language.code + '.svg'" alt="" />
-      </button>
-    </div>
+<!--  <div *ngIf="appSettings.languages.length > 1" class="languages" [ngClass]="!isAdaEnabled() ? 'col-1-17 row-24-27' : 'col-1-17 row-21-27'">-->
+<!--    <h4 class="fs&#45;&#45;34">{{ '13' | dotTranslate }}</h4>-->
+<!--    <div class="spacer&#45;&#45;30"></div>-->
+<!--    <div class="languages__wrapper">-->
+<!--      <button class="language"-->
+<!--              *ngFor="let language of appSettings.languages"-->
+<!--              (click)="onLanguageButtonClick(language.code)"-->
+<!--              [ngClass]="{ active: isLanguageButtonActive(language.code) }"-->
+<!--              [attr.aria-label]="'Language: ' + language.name">-->
+<!--        <img class="language&#45;&#45;icon" [src]="'./assets/images/languages/' + language.code + '.svg'" alt="" />-->
+<!--      </button>-->
+<!--    </div>-->
+<!--  </div> comment Added by TD -->
+  <div [ngClass]="!isAdaEnabled() ? 'col-3-10 row-24-27' : 'col-1-10 row-21-27'">
+    <button class="ui-button icon-button ada-button" [attr.aria-label]="'Accessibility Switcher'" (click)="switchAdaMode()">
+      <svg class="lib-icon size--84"><use href="#lib-icon--ada"></use></svg>
+    </button>
   </div>
   <footer class="footer" [ngClass]="!isAdaEnabled() ? 'col-1-17 row-28-31' : 'col-1-17 row-26-31'">
     <div class="footer__body">
-      <button class="ui-button icon-button ada-button" [attr.aria-label]="'Accessibility Switcher'" (click)="switchAdaMode()">
-        <svg class="lib-icon size--84"><use href="#lib-icon--ada"></use></svg>
-      </button>
     </div>
   </footer>
 </div>
 
-<acr-payment-logos></acr-payment-logos>
+<<acr-payment-logos></acr-payment-logos>
 <acr-status *ngIf="isServiceTypeFirstScreen"></acr-status>

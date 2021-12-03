@@ -1,7 +1,7 @@
 // Service Type Specific Styles
 .service-types {
   button {
-    border:solid 2px  var(--accent);  // Added by TD
+    border:solid 1px  var(--primary);  // Added by TD
   }
   .service-type {
     border-radius: 20rem;
@@ -18,6 +18,7 @@
     position: relative;
 
     img {
+      margin-top: 10px;
       margin: auto;
       align-self: center;
     }
@@ -75,12 +76,17 @@
 }
 
 .page--service-type {
+  background-image: var(--welcome-bg);  // Added by TD
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+
   .footer__body {
-    background: var(--secondary);
+    background: var(--transparent); // Added by TD
   }
 
   .payment-logos {
-    justify-content: flex-end;
+    justify-content: center; // Added by TD
     right: 0;
     top: 0;
   }
@@ -90,13 +96,14 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 32px; // Added by TD
 
   .title {
-    font-size: 170rem;
-    color: var(--coral-red);  // Added by TD
+    font-size: 150rem;
+    color: var(--primary);  // Added by TD
   }
 
   .subtitle {
-    font-size: 54rem;
+    font-size: 44rem;
   }
 }

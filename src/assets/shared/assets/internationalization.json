@@ -79,7 +79,7 @@
 	{
 		"ID": "8",
 		"FR": "confirmer la commande",
-		"EN": "confirm order",
+		"EN": "Confirm Your Order",
 		"it": "conferma l'ordine",
 		"es": "",
 		"de": "",
@@ -155,9 +155,9 @@
 	},
 	{
 		"ID": "15",
-		"FR": "Touch To Order",
-		"EN": "Touch To Order",
-		"it": "Touch To Order",
+		"FR": "Touch Here To Order",
+		"EN": "Touch Here To Order",
+		"it": "Touch Here To Order",
 		"es": "",
 		"de": "",
 		"jp": "",
@@ -178,7 +178,7 @@
 	{
 		"ID": "17",
 		"FR": "payer la commande",
-		"EN": "pay order",
+		"EN": "Proceed to Payment",
 		"it": "paga l'ordine",
 		"es": "",
 		"de": "",
@@ -314,7 +314,7 @@
 	{
 		"ID": "29",
 		"FR": "suivez les instructions du terminal",
-		"EN": "follow the instructions on the terminal",
+		"EN": "Please follow the instructions on the payment display below",
 		"it": "",
 		"es": "",
 		"de": "",
@@ -1311,7 +1311,7 @@
 	{
 		"ID": "2021050702",
 		"FR": "Step",
-		"EN": "Step",
+		"EN": "Choice ",
 		"it": "Step",
 		"es": "",
 		"de": "",

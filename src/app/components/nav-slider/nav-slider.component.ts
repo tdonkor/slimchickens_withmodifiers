@@ -72,7 +72,8 @@ export class NavSliderComponent implements OnInit, AfterViewInit, OnDestroy {
                 const pageId = params.get('pageId');
                 this.mainPage = this.contentService.getMainPage();
                 this.page = pageId === this.mainPage.ID ? this.contentService.getMainPage() : this.contentService.getPage(pageId);
-                this.navButtons = this.page.NavigationButtons.filter((btn) => btn.Link !== '0');
+                // this.navButtons = this.page.NavigationButtons.filter((btn) => btn.Link !== '0');
+                this.navButtons = this.page.NavigationButtons.filter((btn) => ((btn.Link !== '0') && (btn.Link !== '1')));
 
                 this.currentIndex = this.navButtons.findIndex((btn) => btn.Link === pageId);
 

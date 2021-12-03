@@ -84,8 +84,9 @@ export class ModifierComboStepperComponent
     return this.modifiers.length > 0 && this.getQuantityButtons < this.modifiers[this.currentModifierStepIndex].PageInfo.MinQuantity;
   }
 
-  public isLastStep() {
-    return this.currentModifierStepIndex === this.lastIndex;
+  public isLastStep(): number {
+    // return this.currentModifierStepIndex === this.lastIndex;
+    return this.lastIndex = this.modifiers.length;
   }
   public get activeIndex() {
     return this.currentModifierStepIndex;
