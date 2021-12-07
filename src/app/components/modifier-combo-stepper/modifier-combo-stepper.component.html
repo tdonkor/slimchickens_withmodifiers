@@ -2,18 +2,18 @@
   <div [@popupIn] class="content">
     <div class="main-grid">
       <!-- header with images  -->
-      <div class="col-1-17 row-1-10">
+      <div class="col-1-17 row-1-3">
         <header class="header full">
           <div class="combo-name">
-            <div class="combo-img-wrapper">
-              <img class="combo-img" [src]="button | catalogPicture" />
-            </div>
+<!--            <div class="combo-img-wrapper">-->
+<!--              <img class="combo-img" [src]="button | catalogPicture" />-->
+<!--            </div>-->
             <h3 class="width100 text-clamp--2">{{ button | translateCatalogTitle }}</h3>
           </div>
         </header>
       </div>
       <!-- back button section  -->
-      <div class="col-1-17 full back-menu position-relative" [ngClass]="!isAdaEnabled() ? 'row-10-12' : 'row-10-13'">
+      <div class="col-1-17 full back-menu position-relative" [ngClass]="!isAdaEnabled() ? 'row-2-3' : 'row-2-3'">
         <button *ngIf="activeIndex !== 0" class="ui-button primary bg--tertiary tiny iconLeft" (click)='backClick()'
           [attr.aria-label]="'Combo Back Button'">
           <span class="ui-button__wrapper">
@@ -26,7 +26,7 @@
       </div>
       <!-- modifier list with scroll Added by TD  (click)='confirmClick()' -->
       <div class="flex flex--column scrollY hideScrollbar col-1-17"
-        [ngClass]="!isAdaEnabled() ? 'col-1-17 row-12-28' : 'col-1-17 row-13-26'">
+        [ngClass]="!isAdaEnabled() ? 'col-1-17 row-5-28' : 'col-1-17 row-5-26'">
         <acr-button-modifier-list  *ngIf='mofifierStepButtons' class="modifiers-list withoutHeader" [modifier]='mofifierStepButtons'
           [catalogModifierLabelText]="catalogModifierLabelText" [isButtonChanged]="isButtonChanged"
           [onOrder]="!button.isChanged" (click)='confirmClick()'>

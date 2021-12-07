@@ -3652,8 +3652,6 @@ h6 {
   z-index: 1;
 }
 .basketOpened .footer__cart {
-  top: 15vh;
-  z-index: 11;
   border-radius: 30rem;
 }
 .basketOpened .cart-icon--chevron {
@@ -4368,9 +4366,6 @@ h6 {
   margin: 60rem auto;
   grid-gap: 60rem;
   padding: 20rem 70rem;
-}
-.modifiers-list .products--grid.dual-modifiers .product {
-  opacity: 0.3;
 }
 .modifiers-list .products--grid.dual-modifiers .product.selected {
   transform: scale(1.15);

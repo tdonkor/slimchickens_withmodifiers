@@ -38,7 +38,7 @@
 	"viewBasketAfterProductSelection": false,
 	"nutritionalInformationDisplayType": "*",
 	"enableComboAnimation": true,
-	"tableServiceMode": "DISABLED",
+	"tableServiceMode": "EAT_IN",
 	"calculateTotalMode": "VoidOnReturn",
 	"skipSinglePaymentSelection": false,
 	"paymentRetryCounter": 6,

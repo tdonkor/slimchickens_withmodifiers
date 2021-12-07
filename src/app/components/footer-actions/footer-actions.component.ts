@@ -149,7 +149,8 @@ export class FooterActionsComponent implements OnInit, OnDestroy {
         this.appSettingsService.tableServiceMode === TableServiceType.EAT_IN && this.sessionService.serviceType === PosServingLocation.IN ||
         this.appSettingsService.tableServiceMode === TableServiceType.TAKE_OUT && this.sessionService.serviceType === PosServingLocation.OUT) {
           if (whTSSEnabled) {
-            this.router.navigate(['ts-entry']);
+            // this.router.navigate(['ts-entry']); below added by TD
+            await this.router.navigate(['ts-selection']);
             return;
           }
       // this.router.navigate(['ts-selection']);
