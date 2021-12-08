@@ -7,6 +7,7 @@ import { log } from '../../../helpers/log.helper';
 import { routeToFirstPage } from '../../../helpers/first-page.helper';
 import { isAdaEnabled } from '../../../helpers/ada.helper';
 import { WindowReloadService } from '../../../services/window-reload.service';
+import {PosServingLocation} from "dotsdk";
 
 @Component({
   selector: 'acr-order-number',
@@ -14,6 +15,7 @@ import { WindowReloadService } from '../../../services/window-reload.service';
 })
 export class OrderNumberComponent implements OnInit {
   public isAdaEnabled = isAdaEnabled;
+  public isEatIn = false;
 
   @Output() public orderClosed: EventEmitter<void> = new EventEmitter();
 
@@ -41,5 +43,9 @@ export class OrderNumberComponent implements OnInit {
           this.router.navigate([routeToFirstPage()]);
         }
     });
+    // added by TD
+    if (this.sessionService.serviceType === PosServingLocation.IN) {
+        this.isEatIn = true;
+    }
   }
 }

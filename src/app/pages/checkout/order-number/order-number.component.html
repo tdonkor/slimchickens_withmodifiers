@@ -9,7 +9,7 @@
       <h1 class="big--heading color--accent">{{ orderNumber }}</h1>
     </div>
   </section>
-  <section class="col-2-16" [ngClass]="!isAdaEnabled() ? 'row-23-31' : 'row-26-31'">
+  <section *ngIf="!isEatIn" class="col-2-16" [ngClass]="!isAdaEnabled() ? 'row-23-31' : 'row-26-31'">
     <h2 class="text--center">{{ '35' | dotTranslate }}</h2>
   </section>
 </div>
