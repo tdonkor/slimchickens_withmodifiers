@@ -100,7 +100,7 @@ export class ContentService {
   @deprecated
   */
   public getLandingPage(returnCopyOfOriginal: boolean = true): DotPage {
-    const allLandingPages = <DotButton[]>this._dotTree.MainPage.Buttons.filter((x: DotButton) => x.Page.IsLandingPage);
+    const allLandingPages = <DotButton[]> this._dotTree.MainPage.Buttons.filter((x: DotButton) => x.Page.IsLandingPage);
     const landingPage = allLandingPages && allLandingPages.length > 0 ? allLandingPages[0].Page : null;
     return landingPage && returnCopyOfOriginal ? lodash.cloneDeep(landingPage) : landingPage;
   }
