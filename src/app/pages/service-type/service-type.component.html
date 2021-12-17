@@ -13,7 +13,6 @@
   <div class="service-types flex" [ngClass]="!isAdaEnabled() ? 'col-2-16 row-13-22' : 'col-4-14 row-13-21'">
     <button *ngIf="appSettings.serviceType !== PosServingLocation.OUT"
             class="service-type"
-            dot-bi-service-type="IN"
             [disabled]="blockKiosk || !whEatInEnabled"
             (click)="setServiceType(PosServingLocation.IN)"
             [attr.aria-label]="'Service Type: ' + PosServingLocation.IN">
@@ -26,7 +25,6 @@
     </button>
     <button *ngIf="appSettings.serviceType !== PosServingLocation.IN"
             class="service-type"
-            dot-bi-service-type="OUT"
             [disabled]="blockKiosk || !whTakeAwayEnabled"
             (click)="setServiceType(PosServingLocation.OUT)"
             [attr.aria-label]="'Service Type: ' + PosServingLocation.OUT">
@@ -63,5 +61,5 @@
   </footer>
 </div>
 
-<<acr-payment-logos></acr-payment-logos>
+<acr-payment-logos></acr-payment-logos>
 <acr-status *ngIf="isServiceTypeFirstScreen"></acr-status>
