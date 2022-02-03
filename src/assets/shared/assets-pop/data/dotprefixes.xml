@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<Prefixes Sig="1705221601">
-  <Prefixes ID="3" Quantity="1" CostInclusive="1" PercentNotIncluded="10000" PercentIncluded="10000">
-    <Name DEF="Extra" ES="Añadir ingredientes" EN="Add extra ingredients" CA="Afegir ingredients" />
-  </Prefixes>
-  <Prefixes ID="2" Quantity="0" CostInclusive="0" PercentNotIncluded="10000" PercentIncluded="10000">
-    <Name DEF="No" ES="Quitar ingredientes" EN="Remove ingredients" CA="Quitar ingredients" />
-  </Prefixes>
-</Prefixes>

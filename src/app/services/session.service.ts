@@ -69,12 +69,14 @@ export class SessionService {
     this.promosService.resetPromos();
   }
 
-  public setServiceType(type: PosServingLocation) {
-    DotSessionService.getInstance().setServiceType(type);
+  public async setServiceType(type: PosServingLocation) {
+    await DotSessionService.startSession(type);
     if (!this._orderStarted) {
       this._orderStarted = new Date();
       this._isOrderInProgress = true;
     }
+
+    // this.suggestionsSaleService.determineSuggestionsStrategy(this.recoService);
   }
 
   protected sendOMSUpdates(status: SessionEndType) {
@@ -92,9 +94,9 @@ export class SessionService {
         return acc;
       }, 0) >= orderTotal;
       if (status !== SessionEndType.ORDER_SUCCESS) {
-          new OMSEventsFacade().recallEvent(amount, false).subscribe(() => {
-            new OMSEventsFacade().cancelEvent(amount, isPaid).subscribe(() => resolve());
-          });
+        new OMSEventsFacade().recallEvent(amount, false).subscribe(() => {
+          new OMSEventsFacade().cancelEvent(amount, isPaid).subscribe(() => resolve());
+        });
       } else {
         new OMSEventsFacade().finishEvent(amount, isPaid).subscribe(() => resolve());
       }
