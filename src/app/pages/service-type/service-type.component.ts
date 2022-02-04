@@ -1,7 +1,7 @@
 import { Component, Inject, OnDestroy, OnInit } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
 import { Router } from '@angular/router';
-import { PosServingLocation, SectionAvailability } from 'dotsdk';
+import {getMainPage, PosServingLocation, SectionAvailability} from 'dotsdk';
 import { Subscription } from 'rxjs';
 import { WorkingHoursService } from '../../services/working-hours.service';
 import { isAdaEnabled, toggleAdaMode } from '../../helpers/ada.helper';
@@ -67,7 +67,7 @@ export class ServiceTypeComponent implements OnInit, OnDestroy {
     }
     this.sessionService.setServiceType(type);
     this.appInitService.setMetaTags();
-    this.router.navigate(['menu', this.contentService.getMainPage().ID]);
+    this.router.navigate(['menu', getMainPage()?.ID]);
   }
   public async switchAdaMode() {
     await toggleAdaMode();

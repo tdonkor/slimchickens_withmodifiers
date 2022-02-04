@@ -1,6 +1,12 @@
 import { Component, Input, OnDestroy, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { cancelOrderEvent, DotSuggestionSalesService, PosServingLocation, SectionAvailability } from 'dotsdk';
+import {
+  cancelOrderEvent,
+  DotSuggestionSalesService,
+  getMainPage,
+  PosServingLocation,
+  SectionAvailability
+} from 'dotsdk';
 import { CheckoutService } from '../../services/checkout.service';
 import { BasketService } from '../../services/basket.service';
 import { SessionEndType, SessionService } from '../../services/session.service';
@@ -114,7 +120,7 @@ export class FooterActionsComponent implements OnInit, OnDestroy {
      // const backSteps = this.checkoutService.previousUrls.length * -1;
     // window.history.go(backSteps);
     // this.checkoutService.previousUrls = [];
-    this.router.navigate(['menu', this.contentService.getMainPage().ID]);
+    this.router.navigate(['menu', getMainPage()?.ID]);
 
   }
 

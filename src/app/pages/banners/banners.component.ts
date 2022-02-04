@@ -1,6 +1,6 @@
 import { Component, HostListener, OnDestroy, OnInit, ViewEncapsulation } from '@angular/core';
 import { Subscription } from 'rxjs';
-import { PosServingLocation } from 'dotsdk';
+import {getMainPage, PosServingLocation} from 'dotsdk';
 import { SessionService } from '../../services/session.service';
 import { ApplicationSettingsService } from '../../services/app-settings.service';
 import { Router } from '@angular/router';
@@ -61,7 +61,7 @@ export class BannersComponent implements OnInit, OnDestroy {
     }
     if (this.appSettings.orderCheckInFlow === OrderCheckInFlowBundleSetting.ONLY_BANNERS) {
       // this.sessionService.setServiceType(PosServingLocation.IN);
-      this.router.navigate(['menu', this.contentService.getMainPage().ID]);
+      this.router.navigate(['menu', getMainPage()?.ID]);
     } else {
       this.router.navigate(['service-type']);
     }

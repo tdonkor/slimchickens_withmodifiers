@@ -1,5 +1,5 @@
 import { AfterViewChecked, AfterViewInit, ChangeDetectorRef, Component, ElementRef, OnDestroy, OnInit, ViewChild } from '@angular/core';
-import { DotPage, DotButton, DotAvailabilityService, DotButtonType} from 'dotsdk';
+import {DotPage, DotButton, DotAvailabilityService, DotButtonType, getMainPage, getPage} from 'dotsdk';
 import { CheckoutService } from '../../services/checkout.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Location } from '@angular/common';
@@ -58,7 +58,7 @@ export class MenuComponent implements OnDestroy, OnInit, AfterViewChecked, After
   }
 
   public get displayBackButton(): boolean {
-    return this.page.ID !== this.contentService.getMainPage().ID;
+    return this.page.ID !== getMainPage()?.ID;
   }
 
   public get scrollIncrement(): number {
@@ -81,8 +81,8 @@ export class MenuComponent implements OnDestroy, OnInit, AfterViewChecked, After
   ) {
     this.subscriptions.push(this.activatedRoute.paramMap.subscribe(async params => {
       const pageId = params.get('pageId');
-      const page = this.contentService.getPage(pageId);
-      this.page = page ? page : this.contentService.getMainPage();
+      const page = getPage(pageId, true);
+      this.page = page ? page : getMainPage();
       log('page: ', this.page);
     }));
   }

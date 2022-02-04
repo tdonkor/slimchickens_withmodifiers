@@ -10,7 +10,7 @@ import {
     Output,
     ViewChild,
 } from '@angular/core';
-import { DotPage, DotButton } from 'dotsdk';
+import {DotPage, DotButton, getMainPage, getPage} from 'dotsdk';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ApplicationSettingsService } from '../../services/app-settings.service';
 import { HomeButtonDisplayType } from '../../enums/general.enum';
@@ -70,15 +70,15 @@ export class NavSliderComponent implements OnInit, AfterViewInit, OnDestroy {
         this.subscriptions.push(
             this.activatedRoute.paramMap.subscribe((params) => {
                 const pageId = params.get('pageId');
-                this.mainPage = this.contentService.getMainPage();
-                this.page = pageId === this.mainPage.ID ? this.contentService.getMainPage() : this.contentService.getPage(pageId);
+                this.mainPage = getMainPage();
+                this.page = pageId === this.mainPage.ID ? getMainPage() : getPage(pageId, true);
                 // this.navButtons = this.page.NavigationButtons.filter((btn) => btn.Link !== '0');
                 this.navButtons = this.page.NavigationButtons.filter((btn) => ((btn.Link !== '0') && (btn.Link !== '1')));
 
                 this.currentIndex = this.navButtons.findIndex((btn) => btn.Link === pageId);
 
                 this.selectedNavButtonLink = this.navButtons.find((btn) =>
-                    this.checkPageContainsLinkInDepth(this.contentService.getPage(btn.Link))
+                  this.checkPageContainsLinkInDepth(getPage(btn.Link, true))
                 )?.Link;
 
                 if (
@@ -143,7 +143,7 @@ export class NavSliderComponent implements OnInit, AfterViewInit, OnDestroy {
         this.navClickedIndex = index;
         this.dynamicContentService.closeAllDialogs();
 
-        const page = this.contentService.getPage(button.Link);
+        const page = getPage(button.Link, true);
 
         if (page) {
             this.router.navigate(['menu', page.ID]);
