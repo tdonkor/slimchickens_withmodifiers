@@ -110,6 +110,10 @@ export class ModifierComboStepperComponent
     }
   }
 
+  public buttonSelected() {
+    this.confirmClick();
+  }
+
   public confirmClick() {
     if (this.currentModifierStepIndex >= this.lastIndex - 1) {
       this.button['$$suggestionChanged'] = true;

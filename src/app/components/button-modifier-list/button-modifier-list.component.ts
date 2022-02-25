@@ -1,4 +1,14 @@
-import { AfterViewChecked, ChangeDetectorRef, Component, ElementRef, Input, OnInit, QueryList, ViewChildren } from '@angular/core';
+import {
+  AfterViewChecked,
+  ChangeDetectorRef,
+  Component,
+  ElementRef, EventEmitter,
+  Input,
+  OnInit,
+  Output,
+  QueryList,
+  ViewChildren
+} from '@angular/core';
 import { DotButton, DotButtonType, DotModifier, DotPageInfo } from 'dotsdk';
 import { isAutoPopFeatVisible } from '../../helpers/auto-pop-feat.helper';
 import { ModifiersService } from '../../services/modifier.service';
@@ -21,6 +31,8 @@ export class ButtonModifierListComponent implements OnInit, AfterViewChecked  {
   @Input() public onOrder = false;
   @Input() public isCombo = false;
   @Input() public isButtonChanged = false;
+  @Output() public onButtonSelected: EventEmitter<any> = new EventEmitter();
+
   public get getQuantityButtons() {
     let totalQty = 0;
     this.modifier.Buttons.filter(btn => btn.ButtonType === DotButtonType.ITEM_PACK_BUTTON).forEach(x => {
@@ -92,6 +104,7 @@ export class ButtonModifierListComponent implements OnInit, AfterViewChecked  {
         });
     } else {
       this.modifiersService.personalizeButton(button, mod, this.getQuantityButtons);
+      this.onButtonSelected.emit();
     }
   }
   public ngAfterViewChecked() {

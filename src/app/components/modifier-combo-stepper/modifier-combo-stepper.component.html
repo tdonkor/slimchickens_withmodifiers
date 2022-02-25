@@ -29,7 +29,8 @@
         [ngClass]="!isAdaEnabled() ? 'col-1-17 row-5-28' : 'col-1-17 row-5-26'">
         <acr-button-modifier-list  *ngIf='mofifierStepButtons' class="modifiers-list withoutHeader" [modifier]='mofifierStepButtons'
           [catalogModifierLabelText]="catalogModifierLabelText" [isButtonChanged]="isButtonChanged"
-          [onOrder]="!button.isChanged" (click)='confirmClick()'>
+          [onOrder]="!button.isChanged"
+          (onButtonSelected)="buttonSelected()">
         </acr-button-modifier-list>
       </div>
       <!-- bottom actions  -->
