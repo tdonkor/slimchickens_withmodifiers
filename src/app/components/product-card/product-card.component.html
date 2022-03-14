@@ -29,13 +29,13 @@
       </div>
       <!-- right column  -->
       <div class="card__actions">
-<!--        <button-->
-<!--       temp change by TD   class="ui-button primary small color&#45;&#45;tertiary"-->
-<!--          (click)="changeProduct(basketButton)"-->
-<!--          [attr.aria-label]="'Button: Change'"-->
-<!--          *ngIf="hasExtraItems && skipPrecalculate && displayButton">-->
-<!--            {{ "18" | dotTranslate }}-->
-<!--        </button>-->
+        <button
+          class="ui-button primary small color--tertiary"
+          (click)="changeProduct(basketButton)"
+          [attr.aria-label]="'Button: Change'"
+          *ngIf="hasExtraItems && skipPrecalculate && displayButton">
+            {{ "18" | dotTranslate }}
+        </button>
       <div *ngIf="hasExtraItems && skipPrecalculate" class="spacer--20"></div>
       <button
         class="ui-button primary small color--tertiary"

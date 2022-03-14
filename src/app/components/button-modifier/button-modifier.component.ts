@@ -203,6 +203,12 @@ export class ButtonModifierComponent implements OnInit, OnDestroy {
   }
 
   public selectModifiers(modifier: DotButton) {
+
+    // modifier has been re-selected in a change set back to false from true
+    if (modifier.Selected === true) {
+      (modifier.Selected = false);
+    }
+
     if (!modifier.Selected && modifier?.AllergensAndNutritionalValues?.Allergens
       .some(a => this.allergenService.selectedAllergens.some(allergen => a.Name.includes(allergen.Name)))) {
         const hasFullAllergen = modifier?.AllergensAndNutritionalValues?.Allergens
