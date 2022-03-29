@@ -2,7 +2,9 @@
   <h5 class="product__title">{{ button | dotTranslateCaption }}</h5>
   <img class="product__img" [src]="button | translatePicture" alt="">
   <div class="product__info">
-    <span class="calories"><span *ngIf="calories && price > 0">{{ calories }} {{ '65' | dotTranslate }} | </span>{{ price | dotCurrency }}</span>
+<!--    <span class="calories"><span *ngIf="calories && price > 0">{{ calories }} {{ '65' | dotTranslate }} | </span>{{ price | dotCurrency }}</span>-->
+    <div class="calories" *ngIf="price">{{ price | dotCurrency}}</div>
+    <div class="calories" *ngIf="calories" >{{ calories }} </div>
     <svg class="lib-icon color--tertiary size--30"><use href="#lib-icon--pill-chevron-right"></use></svg>
   </div>
   <ng-template [ngIf]="isButtonStatusAvailable">

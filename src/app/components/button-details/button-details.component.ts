@@ -19,6 +19,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Suggestion } from '../../models/suggestion.model';
 import { generateUUID } from '../../helpers/uuid.helper';
 import { enabledTouchlessMode } from '../../helpers/ada.helper';
+import {IngredientsService} from '../../services/ingredients.service';
 
 @Component({
   selector: 'acr-button-details',
@@ -58,13 +59,30 @@ export class ButtonDetailsComponent extends AbstractDynamicComponent implements 
   public get isButtonChanged() {
     return this.button.isChanged;
   }
+  // Added by TD
+  public get calories(): string {
+    return this.resolveCalories();
+  }
 
   public get price(): number {
     return this.buttonPrice * this.button.quantity;
   }
-  public get calories(): string {
-    const calories = this.button?.AllergensAndNutritionalValues?.NutritionalValues?.find(val => val.Name === 'CAL');
-    return calories ? calories.Value : '';
+
+  // Added by TD
+  private _calories: string | undefined;
+
+  // removed by TD  as it doesn't work
+  // public get calories(): string {
+  //   const calories = this.button?.AllergensAndNutritionalValues?.NutritionalValues?.find(val => val.Name === 'CAL');
+  //   return calories ? calories.Value : '';
+  // }
+
+  // Added by TD
+  private resolveCalories(): string {
+    if (this._calories == null) {
+      this._calories = this.ingredientsService.resolveCalories(this.button);
+    }
+    return this._calories;
   }
   public get getQuantityButtons() {
     let totalQty = 0;
@@ -95,6 +113,7 @@ export class ButtonDetailsComponent extends AbstractDynamicComponent implements 
     protected appSettings: ApplicationSettingsService,
     protected basketService: BasketService,
     protected sessionService: SessionService,
+    protected ingredientsService: IngredientsService,
     private componentService: ButtonDetailsService,
     private ref: ChangeDetectorRef,
     @Inject('SUGGESTION_COMPONENT') protected suggestionComponent: Type<AbstractDynamicComponent>,

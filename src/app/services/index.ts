@@ -8,3 +8,4 @@ export * from './allergens.service';
 export * from './basket.service';
 export * from './end-scene-routing.service';
 export * from './promos.service';
+export * from './ingredients.service';
