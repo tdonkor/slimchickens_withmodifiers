@@ -1,12 +1,12 @@
 {
-  "timeStamp": "2022-03-24T13:21:00+00:00",
+  "timeStamp": "2022-06-07T18:06:22+00:00",
   "param": {
-    "workspaceName": "SLIMS DOT19 READY BF & CAMDEN PEPSI UD 21.02.22",
-    "workspaceId": 118,
+    "workspaceName": "Bourne Leisure - New Data",
+    "workspaceId": 145,
     "campaignName": "Acrelec Lab Test",
     "campaignId": 49,
     "packageType": "full",
-    "clientName": "Slim Chickens United Kingdom",
+    "clientName": "Slim Chickens - Bourne Leisure",
     "serverName": "kioskbuilder-p3.acrelec.com"
   }
 }

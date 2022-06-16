@@ -32,7 +32,7 @@ export class ContentService {
 
         // ? Handle 404 (Not Found)
         if (path === '/assets/shared/assets/Items/null') {
-          path = '/assets/branding/taka.PNG';
+          path = '/assets/branding/logo.svg';
         }
 
         image.onload = () => {
